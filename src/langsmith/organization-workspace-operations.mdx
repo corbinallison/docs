@@ -288,10 +288,10 @@ Test datasets with examples for evaluation.
 | Get dataset versions | ✓ | ✓ | ✓ | `datasets:read` |
 | Diff dataset versions | ✓ | ✓ | ✓ | `datasets:read` |
 | Update dataset version (tags) | ✓ | ✓ | ✗ | `datasets:update` |
-| Download dataset (OpenAI format) | ✓ | ✓ | ✓ | `datasets:read` |
-| Download dataset (OpenAI fine-tuning format) | ✓ | ✓ | ✓ | `datasets:read` |
-| Download dataset (CSV) | ✓ | ✓ | ✓ | `datasets:read` |
-| Download dataset (JSONL) | ✓ | ✓ | ✓ | `datasets:read` |
+| Download dataset (OpenAI format) | ✓ | ✓ | ✓ | `datasets:download` |
+| Download dataset (OpenAI fine-tuning format) | ✓ | ✓ | ✓ | `datasets:download` |
+| Download dataset (CSV) | ✓ | ✓ | ✓ | `datasets:download` |
+| Download dataset (JSONL) | ✓ | ✓ | ✓ | `datasets:download` |
 | View dataset sharing state | ✓ | ✓ | ✓ | `datasets:read` |
 | Share dataset publicly | ✓ | ✗ | ✗ | `datasets:share` |
 | Unshare dataset | ✓ | ✗ | ✗ | `datasets:share` |
@@ -361,13 +361,15 @@ Workspace Editors have partial access because they cannot create projects, which
 
 Scores, labels, and corrections on LLM outputs.
 
+<Note>The feedback formula operations are deprecated in favor of [composite evaluators](/langsmith/composite-evaluators-ui) and are scheduled for removal on 2026-08-20.</Note>
+
 | Operation | Workspace Admin | Workspace Editor | Workspace Viewer | Required Permission |
 |-----------|:---------------:|:--------------:|:----------------:|---------------------|
-| List feedback formulas | ✓ | ✓ | ✓ | `feedback:read` |
-| Get feedback formula | ✓ | ✓ | ✓ | `feedback:read` |
-| Create feedback formula | ✓ | ✓ | ✗ | `feedback:create` |
-| Update feedback formula | ✓ | ✓ | ✗ | `feedback:update` |
-| Delete feedback formula | ✓ | ✓ | ✗ | `feedback:delete` |
+| List feedback formulas (deprecated) | ✓ | ✓ | ✓ | `feedback:read` |
+| Get feedback formula (deprecated) | ✓ | ✓ | ✓ | `feedback:read` |
+| Create feedback formula (deprecated) | ✓ | ✓ | ✗ | `feedback:create` |
+| Update feedback formula (deprecated) | ✓ | ✓ | ✗ | `feedback:update` |
+| Delete feedback formula (deprecated) | ✓ | ✓ | ✗ | `feedback:delete` |
 | View specific feedback | ✓ | ✓ | ✓ | `feedback:read` |
 | List feedbacks | ✓ | ✓ | ✓ | `feedback:read` |
 | Create feedback | ✓ | ✓ | ✗ | `feedback:create` |

@@ -207,7 +207,13 @@
                         "group": "Deployment",
                         "pages": [
                           "langsmith/managed-deep-agents",
-                          "oss/python/deepagents/going-to-production"
+                          {
+                            "group": "Going to production",
+                            "root": "oss/python/deepagents/going-to-production",
+                            "pages": [
+                              "oss/python/deepagents/fault-tolerance"
+                            ]
+                          }
                         ]
                       },
                       {
@@ -685,7 +691,13 @@
                         "group": "Deployment",
                         "pages": [
                           "langsmith/managed-deep-agents",
-                          "oss/javascript/deepagents/going-to-production"
+                          {
+                            "group": "Going to production",
+                            "root": "oss/javascript/deepagents/going-to-production",
+                            "pages": [
+                              "oss/javascript/deepagents/fault-tolerance"
+                            ]
+                          }
                         ]
                       },
                       {
@@ -1404,7 +1416,8 @@
                   "langsmith/context-hub",
                   "langsmith/context-engineering-concepts",
                   "langsmith/use-the-context-hub",
-                  "langsmith/manage-contexts-sdk"
+                  "langsmith/manage-contexts-sdk",
+                  "langsmith/context-hub-webhooks"
                 ]
               },
               {
@@ -1431,8 +1444,7 @@
                   {
                     "group": "Quickstarts",
                     "pages": [
-                      "langsmith/deployment-quickstart",
-                      "langsmith/deployment-quickstart-da"
+                      "langsmith/deployment-quickstart"
                     ]
                   },
                   {
@@ -1472,9 +1484,9 @@
                 ]
               },
               {
-                "tab": "Develop agents",
+                "tab": "Agent Server",
                 "pages": [
-                  "langsmith/develop-agents-overview",
+                  "langsmith/agent-server-overview",
                   {
                     "group": "Develop your application",
                     "pages": [
@@ -1500,7 +1512,7 @@
                     ]
                   },
                   {
-                    "group": "Agent server",
+                    "group": "Capabilities",
                     "pages": [
                       "langsmith/agent-server",
                       {
@@ -1609,31 +1621,6 @@
                   "langsmith/deploy-to-cloud",
                   "langsmith/cloud-platform-features",
                   {
-                    "group": "Managed Deep Agents",
-                    "tag": "BETA",
-                    "pages": [
-                      "langsmith/managed-deep-agents-overview",
-                      "langsmith/managed-deep-agents-quickstart",
-                      "langsmith/managed-deep-agents-tutorial",
-                      "langsmith/managed-deep-agents-how-it-works",
-                      "langsmith/managed-deep-agents-identity",
-                      "langsmith/managed-deep-agents-tools",
-                      "langsmith/managed-deep-agents-middleware",
-                      {
-                        "group": "Connectors",
-                        "pages": [
-                          "langsmith/managed-deep-agents-connectors/index",
-                          "langsmith/managed-deep-agents-connectors/mcp",
-                          "langsmith/managed-deep-agents-connectors/langsmith"
-                        ]
-                      },
-                      "langsmith/managed-deep-agents-schedules",
-                      "langsmith/managed-deep-agents-examples",
-                      "langsmith/managed-deep-agents-deploy",
-                      "langsmith/managed-deep-agents-cli"
-                    ]
-                  },
-                  {
                     "group": "Reference",
                     "pages": [
                       "langsmith/env-var-cloud"
@@ -1661,6 +1648,47 @@
                     "group": "Reference",
                     "pages": [
                       "langsmith/env-var-self-hosted"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tab": "Managed Deep Agents",
+                "pages": [
+                  {
+                    "group": "Managed Deep Agents",
+                    "tag": "BETA",
+                    "pages": [
+                      "langsmith/managed-deep-agents-overview",
+                      "langsmith/managed-deep-agents-quickstart",
+                      "langsmith/managed-deep-agents-tutorial",
+                      "langsmith/managed-deep-agents-how-it-works",
+                      "langsmith/managed-deep-agents-identity",
+                      "langsmith/managed-deep-agents-memory",
+                      "langsmith/managed-deep-agents-evals",
+                      "langsmith/managed-deep-agents-tools",
+                      "langsmith/managed-deep-agents-middleware",
+                      {
+                        "group": "Connectors",
+                        "pages": [
+                          "langsmith/managed-deep-agents-connectors/index",
+                          "langsmith/managed-deep-agents-connectors/mcp",
+                          "langsmith/managed-deep-agents-connectors/github",
+                          "langsmith/managed-deep-agents-connectors/langsmith"
+                        ]
+                      },
+                      {
+                        "group": "Channels",
+                        "pages": [
+                          "langsmith/managed-deep-agents-channels/index",
+                          "langsmith/managed-deep-agents-channels/slack",
+                          "langsmith/managed-deep-agents-channels/github"
+                        ]
+                      },
+                      "langsmith/managed-deep-agents-schedules",
+                      "langsmith/managed-deep-agents-examples",
+                      "langsmith/managed-deep-agents-deploy",
+                      "langsmith/managed-deep-agents-cli"
                     ]
                   }
                 ]
@@ -1766,7 +1794,6 @@
                               "langsmith/trace-bedrock",
                               "langsmith/trace-deepseek",
                               "langsmith/trace-with-google-gemini",
-                              "langsmith/trace-with-langchain",
                               "langsmith/trace-litellm",
                               "langsmith/trace-with-mistral",
                               "langsmith/trace-openai",
@@ -1781,6 +1808,7 @@
                               "langsmith/trace-with-crewai",
                               "langsmith/trace-deep-agents",
                               "langsmith/trace-with-google-adk",
+                              "langsmith/trace-with-langchain",
                               "langsmith/trace-with-langgraph",
                               "langsmith/trace-with-mastra",
                               "langsmith/trace-with-microsoft-agent-framework",
@@ -1958,7 +1986,7 @@
                   "langsmith/smith-go-sdk",
                   "langsmith/smith-java-sdk",
                   {
-                    "group": "API reference",
+                    "group": "LangSmith REST API",
                     "openapi": {
                       "source": "langsmith/langsmith-platform-openapi.json",
                       "directory": "langsmith/smith-api"
@@ -2238,7 +2266,9 @@
                       "langsmith/llm-gateway-coding-agents",
                       "langsmith/llm-gateway-access",
                       "langsmith/llm-gateway-custom-providers",
+                      "langsmith/llm-gateway-fallbacks",
                       "langsmith/llm-gateway-spend-policies",
+                      "langsmith/llm-gateway-rate-limit-policies",
                       "langsmith/llm-gateway-redaction"
                     ]
                   },
@@ -2326,6 +2356,7 @@
               "langsmith/engine-overview",
               "langsmith/engine",
               "langsmith/engine-webhooks",
+              "langsmith/engine-security",
               "langsmith/engine-self-hosted"
             ]
           },
@@ -2344,6 +2375,9 @@
                   "oss/python/deepagents/code/overview",
                   "oss/python/deepagents/code/quickstart",
                   "oss/python/deepagents/code/cli-reference",
+                  "oss/python/deepagents/code/approval-modes",
+                  "oss/python/deepagents/code/goals-and-rubrics",
+                  "oss/python/deepagents/code/plugins",
                   "oss/python/deepagents/code/memory-and-skills",
                   "oss/python/deepagents/code/remote-sandboxes",
                   "oss/python/deepagents/code/subagents",
@@ -2358,7 +2392,8 @@
                       "oss/python/deepagents/code/hooks",
                       "oss/python/deepagents/code/mcp-tools"
                     ]
-                  }
+                  },
+                  "oss/python/deepagents/code/changelog"
                 ]
               },
               {
@@ -2371,6 +2406,9 @@
                   "oss/javascript/deepagents/code/overview",
                   "oss/javascript/deepagents/code/quickstart",
                   "oss/javascript/deepagents/code/cli-reference",
+                  "oss/javascript/deepagents/code/approval-modes",
+                  "oss/javascript/deepagents/code/goals-and-rubrics",
+                  "oss/javascript/deepagents/code/plugins",
                   "oss/javascript/deepagents/code/memory-and-skills",
                   "oss/javascript/deepagents/code/remote-sandboxes",
                   "oss/javascript/deepagents/code/subagents",
@@ -2405,6 +2443,10 @@
     }
   },
   "redirects": [
+    {
+      "source": "/langsmith/develop-agents-overview",
+      "destination": "/langsmith/agent-server-overview"
+    },
     {
       "source": "/langsmith/core-capabilities",
       "destination": "/langsmith/agent-server"
