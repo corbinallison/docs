@@ -443,9 +443,9 @@ python:
   - name: Permit
     pypi: langchain-permit
     docs_url: https://github.com/permitio/langchain-permit
-  - name: PaySafe
-    pypi: langchain-paysafe
-    docs_url: https://paysafe-agent.com
+  - name: TollWarden
+    pypi: langchain-tollwarden
+    docs_url: https://tollwarden.com
   - name: PlivoToolkit
     pypi: langchain-plivo-tools
     docs_url: https://github.com/plivo-dev/langchain-plivo-tools
